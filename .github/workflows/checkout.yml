@@ -1,0 +1,17 @@
+name: Workflow con checkout
+
+on: [push]
+
+jobs:
+  probar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el código del repo
+        uses: actions/checkout@v4
+
+      - name: Ver archivos en el repo
+        run: ls -la
+
+      - name: Mensaje final
+        run: echo "Todo listo"
+
