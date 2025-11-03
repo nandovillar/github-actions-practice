@@ -1,0 +1,21 @@
+name: Guardar artifacts
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Crear carpeta de archivos
+        run: mkdir output
+
+      - name: Crear archivo de resultados
+        run: echo "✅ Archivo generado por GitHub Actions" > output/resultado.txt
+
+      - name: Subir artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mi-resultado
+          path: output/
