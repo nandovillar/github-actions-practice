@@ -1,0 +1,9 @@
+name: Hola
+on: [push]
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hola desde Actions íº€"
+
