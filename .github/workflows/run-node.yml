@@ -15,5 +15,8 @@ jobs:
         with:
           node-version: 18
 
+      - name: Mostrar archivos
+        run: ls -la
+
       - name: Ejecutar script
         run: node script.js
